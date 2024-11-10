@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cars Index</title>
+  </head>
+  <body>
+    <h1>All Cars</h1>
+    <a href="/cars/new">Add New Car</a>
+    <ul>
+      <% cars.forEach(car => { %>
+      <li>
+        <a href="/cars/<%= car._id %>"><%= car.make %> <%= car.model %></a>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Car Details</title>
+  </head>
+  <body>
+    <h1><%= car.make %> <%= car.model %></h1>
+    <p>Year: <%= car.year %></p>
+    <p>Available: <%= car.isAvailable ? "Yes" : "No" %></p>
+    <a href="/cars/<%= car._id %>/edit">Edit Car</a>
+    <form action="/cars/<%= car._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete Car</button>
+    </form>
+  </body>
+</html>

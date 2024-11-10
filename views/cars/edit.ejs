@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Edit Car</title>
+  </head>
+  <body>
+    <h1>Edit <%= car.make %> <%= car.model %></h1>
+    <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
+      <label for="make">Make:</label>
+      <input type="text" name="make" value="<%= car.make %>" required />
+      <label for="model">Model:</label>
+      <input type="text" name="model" value="<%= car.model %>" required />
+      <label for="year">Year:</label>
+      <input type="number" name="year" value="<%= car.year %>" required />
+      <label for="isAvailable">Available:</label>
+      <input type="checkbox" name="isAvailable" <%= car.isAvailable ? "checked"
+      : "" %> />
+      <button type="submit">Update Car</button>
+    </form>
+  </body>
+</html>
